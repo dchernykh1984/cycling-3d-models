@@ -86,7 +86,8 @@ description: Бутылка для инструментов (tool-bottle/) — �
 
 - Корпус, крышки и дно — PETG, проверено на Bambu PETG Basic: сопло 250 °C,
   стол 70–80 °C, Max volumetric speed 9 мм³/с, обдув 40–50%.
-- Сетка — TPU.
+- Сетка — TPU: проверена в TPU 95A, но, по словам владельца, TPU 90A,
+  вероятно, подойдёт лучше.
 - Половины печатаются срезом вниз, верх у них — арка. Под потолок нужны
   поддержки: Tree (auto), Organic, Threshold angle 30°, On build plate only.
   Support critical regions only — выключить: с ней поддержки появляются

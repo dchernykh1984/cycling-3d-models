@@ -1,0 +1,101 @@
+{
+  "source": "/Users/denischernykh/print_queue/computers/openai/garmin-1030-case-v4.blend",
+  "before": {
+    "vertices": 312515,
+    "faces": 440472,
+    "nonmanifold_edges": 0,
+    "components": [
+      312515
+    ],
+    "volume_mm3": 11637.766462087142,
+    "dimensions_mm": [
+      62.07019805908203,
+      117.70906066894531,
+      16.40010643005371
+    ]
+  },
+  "reference_before": {
+    "vertices": 148154,
+    "faces": 148152,
+    "nonmanifold_edges": 0,
+    "components": [
+      148154
+    ],
+    "volume_mm3": 85743.25156031412,
+    "dimensions_mm": [
+      57.88041305541992,
+      113.92225646972656,
+      18.9773006439209
+    ]
+  },
+  "reference_cleanup": {
+    "max_displacement_mm": 0.08000000000000393,
+    "moved_vertices_over_0_01mm": 134246,
+    "sharp_vertices_protected": 3544
+  },
+  "reference_after": {
+    "vertices": 148154,
+    "faces": 148152,
+    "nonmanifold_edges": 0,
+    "components": [
+      148154
+    ],
+    "volume_mm3": 85689.56525651661,
+    "dimensions_mm": [
+      57.86248779296875,
+      113.89591979980469,
+      18.970102310180664
+    ]
+  },
+  "reference_output": "garmin-1030-reference-cleaned",
+  "case_cleanup": {
+    "max_displacement_mm": 0.0800000000000038,
+    "moved_vertices_over_0_01mm": 243594,
+    "sharp_vertices_protected": 10833
+  },
+  "rim": {
+    "original_height_retention_tabs": 4,
+    "tab_length_mm": 6,
+    "old_top_z_mm": 16.399995803833008,
+    "new_top_z_mm": 18.349617731571197,
+    "device_front_z_mm": 14.900907516479492,
+    "cut_z_mm": 14.350907516479491,
+    "aperture_max_planned_change_mm": 0.03999999999999915,
+    "slope_horizontal_per_vertical": 1.0,
+    "retention_land_mm": 0.4,
+    "max_overlap_radial_mm": 3.4987102150917053
+  },
+  "intermediate": {
+    "vertices": 438122,
+    "faces": 626575,
+    "nonmanifold_edges": 0,
+    "components": [
+      438122
+    ],
+    "volume_mm3": 12710.315004615226,
+    "dimensions_mm": [
+      62.066383361816406,
+      117.68032836914062,
+      18.349639892578125
+    ]
+  },
+  "port": {
+    "changed": false,
+    "revision": "Original horizontal charging opening restored from v4; upper retaining rim improvements retained"
+  },
+  "final": {
+    "vertices": 438122,
+    "faces": 626575,
+    "nonmanifold_edges": 0,
+    "components": [
+      438122
+    ],
+    "volume_mm3": 12710.315004615226,
+    "dimensions_mm": [
+      62.066383361816406,
+      117.68032836914062,
+      18.349639892578125
+    ]
+  },
+  "output": "garmin-1030-case-v5"
+}

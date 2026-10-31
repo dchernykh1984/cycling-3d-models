@@ -1,0 +1,8 @@
+{
+  "samples": 20136,
+  "new_reference_penetration_over_0_15mm": 0,
+  "old_reference_penetration_over_0_15mm": 0,
+  "max_additional_penetration_mm": 0.04566098560462706,
+  "additional_penetration_over_0_2mm": 0,
+  "method": "sampled nearest-face signed distance; not physical fit certification"
+}

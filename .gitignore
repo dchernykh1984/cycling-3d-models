@@ -1,0 +1,61 @@
+# ===== Система =====
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# ===== Редакторы =====
+
+# VSCode
+.vscode/
+
+# JetBrains (PyCharm и др.)
+.idea/
+
+# Vim / Neovim
+*.swp
+*.swo
+
+# ===== ИИ-агенты =====
+
+# Claude Code: общий контекст (CLAUDE.md, скиллы, хуки, разрешения) лежит
+# в репозитории, чтобы новая сессия сразу знала, как здесь работать.
+# Не попадают только личные разрешения каждого.
+.claude/settings.local.json
+
+# Codex: AGENTS.md, .agents/skills/ и .codex/ коммитятся по той же причине.
+
+# Остальные агенты здесь не настроены, их локальные файлы не нужны
+.cursor/
+.windsurf/
+.gemini/
+.aider*
+.continue/
+.copilot/
+
+# ===== Blender =====
+
+# Прошлые версии, которые Blender оставляет при сохранении: model.blend1, model.blend2…
+*.blend[0-9]*
+# Недописанное сохранение: Blender пишет в model.blend@ и потом переименовывает
+*.blend@
+
+# ===== Слайсер =====
+
+# Нарезка зависит от принтера и профиля; в репозитории — сами модели
+*.gcode
+*.bgcode
+*.gcode.3mf
+
+# ===== Python =====
+
+__pycache__/
+*.py[cod]
+.venv/
+
+# ===== Временные файлы =====
+
+tmp/

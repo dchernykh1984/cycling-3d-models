@@ -1,0 +1,101 @@
+{
+  "source": "/Users/denischernykh/print_queue/computers/openai/garmin-530-830-case-v4.blend",
+  "before": {
+    "vertices": 258647,
+    "faces": 360982,
+    "nonmanifold_edges": 0,
+    "components": [
+      258647
+    ],
+    "volume_mm3": 8827.093799242102,
+    "dimensions_mm": [
+      55.895957946777344,
+      88.42559814453125,
+      17.530174255371094
+    ]
+  },
+  "reference_before": {
+    "vertices": 362441,
+    "faces": 360270,
+    "nonmanifold_edges": 0,
+    "components": [
+      362441
+    ],
+    "volume_mm3": 58928.69077400778,
+    "dimensions_mm": [
+      50.84008026123047,
+      85.11599731445312,
+      19.987699508666992
+    ]
+  },
+  "reference_cleanup": {
+    "max_displacement_mm": 0.08000000000000095,
+    "moved_vertices_over_0_01mm": 143692,
+    "sharp_vertices_protected": 4509
+  },
+  "reference_after": {
+    "vertices": 362441,
+    "faces": 360270,
+    "nonmanifold_edges": 0,
+    "components": [
+      362441
+    ],
+    "volume_mm3": 58920.42266247251,
+    "dimensions_mm": [
+      50.827369689941406,
+      85.10459899902344,
+      19.984182357788086
+    ]
+  },
+  "reference_output": "garmin-530-830-reference-cleaned",
+  "case_cleanup": {
+    "max_displacement_mm": 0.08000000000000385,
+    "moved_vertices_over_0_01mm": 193806,
+    "sharp_vertices_protected": 11406
+  },
+  "rim": {
+    "original_height_retention_tabs": 4,
+    "tab_length_mm": 6,
+    "old_top_z_mm": 17.52999496459961,
+    "new_top_z_mm": 18.99096859693527,
+    "device_front_z_mm": 16.02828598022461,
+    "cut_z_mm": 15.478285980224609,
+    "aperture_max_planned_change_mm": 0.03293204307556152,
+    "slope_horizontal_per_vertical": 1.0,
+    "retention_land_mm": 0.4,
+    "max_overlap_radial_mm": 3.012682616710663
+  },
+  "intermediate": {
+    "vertices": 354480,
+    "faces": 505831,
+    "nonmanifold_edges": 0,
+    "components": [
+      354480
+    ],
+    "volume_mm3": 9203.745074912065,
+    "dimensions_mm": [
+      55.888240814208984,
+      88.40399169921875,
+      18.9909725189209
+    ]
+  },
+  "port": {
+    "changed": false,
+    "revision": "Original horizontal charging opening restored from v4; upper retaining rim improvements retained"
+  },
+  "final": {
+    "vertices": 354480,
+    "faces": 505831,
+    "nonmanifold_edges": 0,
+    "components": [
+      354480
+    ],
+    "volume_mm3": 9203.745074912065,
+    "dimensions_mm": [
+      55.888240814208984,
+      88.40399169921875,
+      18.9909725189209
+    ]
+  },
+  "output": "garmin-530-830-case-v5"
+}

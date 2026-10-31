@@ -1,0 +1,101 @@
+{
+  "source": "/Users/denischernykh/print_queue/computers/openai/garmin-540-case-v4.blend",
+  "before": {
+    "vertices": 286656,
+    "faces": 395465,
+    "nonmanifold_edges": 0,
+    "components": [
+      286656
+    ],
+    "volume_mm3": 10125.10844145788,
+    "dimensions_mm": [
+      62.17240905761719,
+      88.80995178222656,
+      18.00986099243164
+    ]
+  },
+  "reference_before": {
+    "vertices": 318865,
+    "faces": 476079,
+    "nonmanifold_edges": 0,
+    "components": [
+      318865
+    ],
+    "volume_mm3": 65994.45286474557,
+    "dimensions_mm": [
+      58.263729095458984,
+      85.50477600097656,
+      19.65452766418457
+    ]
+  },
+  "reference_cleanup": {
+    "max_displacement_mm": 0.08000000000000375,
+    "moved_vertices_over_0_01mm": 273636,
+    "sharp_vertices_protected": 2779
+  },
+  "reference_after": {
+    "vertices": 318865,
+    "faces": 476079,
+    "nonmanifold_edges": 0,
+    "components": [
+      318865
+    ],
+    "volume_mm3": 65989.11874723999,
+    "dimensions_mm": [
+      58.257293701171875,
+      85.48206329345703,
+      19.651954650878906
+    ]
+  },
+  "reference_output": "garmin-840-reference-for-540-cleaned",
+  "case_cleanup": {
+    "max_displacement_mm": 0.08000000000000361,
+    "moved_vertices_over_0_01mm": 210335,
+    "sharp_vertices_protected": 11912
+  },
+  "rim": {
+    "original_height_retention_tabs": 4,
+    "tab_length_mm": 6,
+    "old_top_z_mm": 18.009824752807617,
+    "new_top_z_mm": 19.56017394065857,
+    "device_front_z_mm": 16.51816749572754,
+    "cut_z_mm": 15.968167495727538,
+    "aperture_max_planned_change_mm": 0.03566467761993408,
+    "slope_horizontal_per_vertical": 1.0,
+    "retention_land_mm": 0.4,
+    "max_overlap_radial_mm": 3.0920064449310303
+  },
+  "intermediate": {
+    "vertices": 394107,
+    "faces": 555984,
+    "nonmanifold_edges": 0,
+    "components": [
+      394107
+    ],
+    "volume_mm3": 10669.418174586226,
+    "dimensions_mm": [
+      62.169349670410156,
+      88.76408386230469,
+      19.5601749420166
+    ]
+  },
+  "port": {
+    "changed": false,
+    "revision": "Original horizontal charging opening restored from v4; upper retaining rim improvements retained"
+  },
+  "final": {
+    "vertices": 394107,
+    "faces": 555984,
+    "nonmanifold_edges": 0,
+    "components": [
+      394107
+    ],
+    "volume_mm3": 10669.418174586226,
+    "dimensions_mm": [
+      62.169349670410156,
+      88.76408386230469,
+      19.5601749420166
+    ]
+  },
+  "output": "garmin-540-case-v5"
+}

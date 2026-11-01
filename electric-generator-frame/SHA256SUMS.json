@@ -1,0 +1,33 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "README.md": "a023fc9401082edb84d75d6307343957ee43c142002ffddacdbeed4890b019ba",
+    "assembly_report.json": "738e1a2bf60597e65fd4ad615da585f062f211f94144ab00052c7bd153c96b84",
+    "assembly_stl_manifest.json": "5196f141b0ea07dc2969ed585bc029464294ca0d420424f881bedfd4e0ba36fb",
+    "bike_generator_stand.blend": "3ba974b446007a5550a19379b77960f7ff9c51abe8cac2be69ce67594b6d8703",
+    "bike_generator_stand_assembled.stl": "b139785e53d408b43a82f3200b1047c58f609128b90766a0b8d07b7b72abd70b",
+    "build_stand.py": "e79300b53f5c17b98cd0b654c49bb8f4ec4c342ac631425cc9faa2b45592f678",
+    "checks.json": "9d9587bb94af59069955822b501363e7734b2e1605bfd7a72ed8bc65d047ac33",
+    "preview_assembly.png": "58021c48e6c5fe89fa603e02a4e42e8cf21fca7489787858d805da4bd0e7670b",
+    "preview_front.png": "d9496f788f095de5e6df638ece6c54a95625c81947d0c07f239d8074f7548254",
+    "preview_rear.png": "e0b20b215b7ad666d78515fa4084107d8e827e2ff6e60304d936e83609f60fff",
+    "print_manifest.csv": "d8a5f0809c2020129b69bb7d9a6bb1ba8e31396cf90d76c6a5f084544a2b505f",
+    "print_manifest.json": "d3e9f06e4ea399dbd9b9897252a204b131f1dec39211d797fb0bd74e7cc0e169",
+    "torque_plate_steel_30x6_x2.dxf": "d4df7d5fbbb137ee81c559b5013108cefd5537e4a8b346554556cdd903315f7a",
+    "stl_individual/01_PETG_tower_x1.stl": "d1bbca08d8dba3ba11de15404df898cbcdae4b917e73c6507342875928f8d771",
+    "stl_individual/02_PETG_bb86_sleeve_x1.stl": "ff73e495c2f48e3babcfdcc681d6c533aa8acea79bbd6040c6437d76a5b400d4",
+    "stl_individual/03_PETG_base_half_x2.stl": "4b286e3daa2fb05b009004aed9a6113edbcb7abfc73211ce89fa0ac1810d06fc",
+    "stl_individual/04_PETG_rear_block_x1.stl": "bf7f777df3f037fd579a4ae894ba7b2dd391c0cfb454fce53fb9958b105d5e11",
+    "stl_individual/05_PETG_dropout_right_x1.stl": "2c69c62c7dee73ce733128a51c1033141de6d8dfc41f7f3b9eeb4ff23ee17425",
+    "stl_individual/06_PETG_dropout_left_x1.stl": "fc4e46e9e3f2eed89dadb95b45870b2875a5e48eae3fef060b33fb53cbfe4e26",
+    "stl_individual/07_PETG_spacer_left_30p5mm_x1.stl": "a8a9784cb0fe4cb4413860ed53fb3e0480e79609e31bfb45deac19000c544d05",
+    "stl_individual/07_PETG_spacer_right_9p5mm_x1.stl": "689d207979cd026fa155e25469b98d39dbbde558b209143171ade599beca84c8",
+    "stl_individual/08_PETG_axle_insert_x2.stl": "c6c878ced18646b42748fc36822607fcc63ba9bcb38d8a96a4dabce2e250622d",
+    "stl_individual/09_PETG_TEST_dropout_slot_x1.stl": "fc345cd2741bd66f0253aa60fcd8830296a896ef8accaebfeb73f2d10f6c0b8f",
+    "stl_individual/10_PETG_TEST_bb86_ring_ID40p9_x1.stl": "1f9079e1cdef558b38d82894bbafd2b7636628ae12a99a8aaf9ec5946289b227",
+    "stl_individual/10_PETG_TEST_bb86_ring_ID41p1_x1.stl": "6f84c4f2e324b41df5a184e3c446ecb15e74bc2cfc76aa19f686f10e3dd6af49",
+    "stl_individual/10_PETG_TEST_bb86_ring_ID41p3_x1.stl": "fce8155ecf7a8fcbe6fc55e045a4a0bcdd72c6d5676b867d5ec2a6fee95422e3",
+    "stl_individual/10_PETG_TEST_bb86_ring_ID41p5_x1.stl": "22ea373f45ee258fa611d2232133b461a687d121c67d1114e7a062f55f7f51c8",
+    "stl_individual/11_PETG_TEMPLATE_torque_plate_30x6_x2.stl": "b4aa80e2f8042ca35e5ceb728daf15cbfc50b293b26af5c32bf567648a2fad81"
+  }
+}

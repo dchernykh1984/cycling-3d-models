@@ -1,0 +1,251 @@
+{
+  "units": "mm",
+  "print_axis": "Z",
+  "bed_mm": [
+    220,
+    220,
+    240
+  ],
+  "parts": [
+    {
+      "file": "01_PETG_tower_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "structural",
+      "print_size_mm": [
+        200.0,
+        210.0,
+        44.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 665.7,
+      "triangles": 2888
+    },
+    {
+      "file": "02_PETG_bb86_sleeve_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "structural",
+      "print_size_mm": [
+        60.0,
+        60.0,
+        86.5
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 129.6,
+      "triangles": 1568
+    },
+    {
+      "file": "03_PETG_base_half_x2.stl",
+      "material": "PETG",
+      "quantity": 2,
+      "role": "structural",
+      "print_size_mm": [
+        200.0,
+        200.0,
+        140.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 1097.0,
+      "triangles": 2200
+    },
+    {
+      "file": "04_PETG_rear_block_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "structural",
+      "print_size_mm": [
+        55.0,
+        200.0,
+        105.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 496.6,
+      "triangles": 4830
+    },
+    {
+      "file": "05_PETG_dropout_right_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "structural",
+      "print_size_mm": [
+        175.0,
+        202.0,
+        76.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 516.6,
+      "triangles": 2220
+    },
+    {
+      "file": "06_PETG_dropout_left_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "structural",
+      "print_size_mm": [
+        175.0,
+        202.0,
+        76.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 516.6,
+      "triangles": 2218
+    },
+    {
+      "file": "08_PETG_axle_insert_x2.stl",
+      "material": "PETG",
+      "quantity": 2,
+      "role": "replaceable_wear_part",
+      "print_size_mm": [
+        64.0,
+        89.0,
+        16.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 47.1,
+      "triangles": 1258
+    },
+    {
+      "file": "07_PETG_spacer_left_30p5mm_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "chainline_spacer",
+      "print_size_mm": [
+        55.0,
+        170.0,
+        30.5
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 112.4,
+      "triangles": 840
+    },
+    {
+      "file": "07_PETG_spacer_right_9p5mm_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "chainline_spacer",
+      "print_size_mm": [
+        55.0,
+        170.0,
+        9.5
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 35.0,
+      "triangles": 856
+    },
+    {
+      "file": "09_PETG_TEST_dropout_slot_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "test_fit",
+      "print_size_mm": [
+        75.0,
+        34.0,
+        10.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 17.6,
+      "triangles": 680
+    },
+    {
+      "file": "10_PETG_TEST_bb86_ring_ID40p9_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "test_fit",
+      "print_size_mm": [
+        55.0,
+        55.0,
+        12.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 12.7,
+      "triangles": 1298
+    },
+    {
+      "file": "10_PETG_TEST_bb86_ring_ID41p1_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "test_fit",
+      "print_size_mm": [
+        55.0,
+        55.0,
+        12.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 12.5,
+      "triangles": 1314
+    },
+    {
+      "file": "10_PETG_TEST_bb86_ring_ID41p3_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "test_fit",
+      "print_size_mm": [
+        55.0,
+        55.0,
+        12.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 12.3,
+      "triangles": 1330
+    },
+    {
+      "file": "10_PETG_TEST_bb86_ring_ID41p5_x1.stl",
+      "material": "PETG",
+      "quantity": 1,
+      "role": "test_fit",
+      "print_size_mm": [
+        55.0,
+        55.0,
+        12.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 12.1,
+      "triangles": 1348
+    },
+    {
+      "file": "11_PETG_TEMPLATE_torque_plate_30x6_x2.stl",
+      "material": "PETG",
+      "quantity": 2,
+      "role": "template",
+      "print_size_mm": [
+        30.0,
+        114.17,
+        6.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 18.5,
+      "triangles": 400
+    }
+  ]
+}

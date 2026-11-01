@@ -1,0 +1,298 @@
+{
+  "units": "mm",
+  "purpose": "assembled_visual_reference_not_for_printing",
+  "objects": [
+    {
+      "object": "REF_alu_tube_20x400",
+      "triangles": 384
+    },
+    {
+      "object": "REF_alu_tube_20x400.001",
+      "triangles": 384
+    },
+    {
+      "object": "REF_axle",
+      "triangles": 164
+    },
+    {
+      "object": "REF_axle_nut",
+      "triangles": 20
+    },
+    {
+      "object": "REF_axle_nut.001",
+      "triangles": 20
+    },
+    {
+      "object": "REF_axle_washer_steel_3mm",
+      "triangles": 252
+    },
+    {
+      "object": "REF_axle_washer_steel_3mm.001",
+      "triangles": 252
+    },
+    {
+      "object": "REF_cable_exit_left_ASSUMED",
+      "triangles": 92
+    },
+    {
+      "object": "REF_chain_lower",
+      "triangles": 44
+    },
+    {
+      "object": "REF_chain_upper",
+      "triangles": 44
+    },
+    {
+      "object": "REF_chainring_44T",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_crank_170",
+      "triangles": 92
+    },
+    {
+      "object": "REF_crank_170.001",
+      "triangles": 92
+    },
+    {
+      "object": "REF_disc_mount_sprocket_16T_ASSUMED",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_hub_motor",
+      "triangles": 2044
+    },
+    {
+      "object": "REF_pedal",
+      "triangles": 12
+    },
+    {
+      "object": "REF_pedal.001",
+      "triangles": 12
+    },
+    {
+      "object": "REF_side_bolt_M8x50",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x50.001",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x50.002",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x50.003",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x70",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x70.001",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x70.002",
+      "triangles": 92
+    },
+    {
+      "object": "REF_side_bolt_M8x70.003",
+      "triangles": 92
+    },
+    {
+      "object": "REF_spindle_24",
+      "triangles": 188
+    },
+    {
+      "object": "REF_strut_nut_M10",
+      "triangles": 20
+    },
+    {
+      "object": "REF_strut_nut_M10.001",
+      "triangles": 20
+    },
+    {
+      "object": "REF_strut_nut_M10.002",
+      "triangles": 20
+    },
+    {
+      "object": "REF_strut_nut_M10.003",
+      "triangles": 20
+    },
+    {
+      "object": "REF_strut_rod_M10x200",
+      "triangles": 124
+    },
+    {
+      "object": "REF_strut_washer_M10",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_strut_washer_M10.001",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_torque_plate_steel_30x6",
+      "triangles": 400
+    },
+    {
+      "object": "REF_torque_plate_steel_30x6.001",
+      "triangles": 400
+    },
+    {
+      "object": "REF_tower_bolt_M8x80",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tower_bolt_M8x80.001",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tower_bolt_M8x80.002",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tower_bolt_M8x80.003",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tower_bolt_head_DIN912",
+      "triangles": 124
+    },
+    {
+      "object": "REF_tower_bolt_head_DIN912.001",
+      "triangles": 124
+    },
+    {
+      "object": "REF_tower_bolt_head_DIN912.002",
+      "triangles": 124
+    },
+    {
+      "object": "REF_tower_bolt_head_DIN912.003",
+      "triangles": 124
+    },
+    {
+      "object": "REF_tower_nut_M8",
+      "triangles": 20
+    },
+    {
+      "object": "REF_tower_nut_M8.001",
+      "triangles": 20
+    },
+    {
+      "object": "REF_tower_nut_M8.002",
+      "triangles": 20
+    },
+    {
+      "object": "REF_tower_nut_M8.003",
+      "triangles": 20
+    },
+    {
+      "object": "REF_tq_bolt_M6x20",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_M6x20.001",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_M6x20.002",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_M6x20.003",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_head_DIN912",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_head_DIN912.001",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_head_DIN912.002",
+      "triangles": 92
+    },
+    {
+      "object": "REF_tq_bolt_head_DIN912.003",
+      "triangles": 92
+    },
+    {
+      "object": "REF_washer_M8",
+      "triangles": 124
+    },
+    {
+      "object": "REF_washer_M8.001",
+      "triangles": 124
+    },
+    {
+      "object": "REF_washer_M8.002",
+      "triangles": 124
+    },
+    {
+      "object": "REF_washer_M8.003",
+      "triangles": 124
+    },
+    {
+      "object": "axle_insert_dropout_left",
+      "triangles": 1262
+    },
+    {
+      "object": "axle_insert_dropout_right",
+      "triangles": 1258
+    },
+    {
+      "object": "base_half_L",
+      "triangles": 2200
+    },
+    {
+      "object": "base_half_R",
+      "triangles": 2200
+    },
+    {
+      "object": "dropout_left",
+      "triangles": 2218
+    },
+    {
+      "object": "dropout_right",
+      "triangles": 2220
+    },
+    {
+      "object": "rear_block",
+      "triangles": 4830
+    },
+    {
+      "object": "sleeve_bb86",
+      "triangles": 1568
+    },
+    {
+      "object": "spacer_left",
+      "triangles": 840
+    },
+    {
+      "object": "spacer_right",
+      "triangles": 856
+    },
+    {
+      "object": "tower",
+      "triangles": 2888
+    }
+  ],
+  "triangles": 34448,
+  "bounds_min_mm": [
+    -100.0,
+    -200.0,
+    0.0
+  ],
+  "bounds_max_mm": [
+    394.5,
+    200.0,
+    432.0
+  ],
+  "excluded": "test parts, envelopes, camera"
+}

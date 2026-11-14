@@ -320,11 +320,11 @@
     },
     {
       "object": "dropout_left",
-      "triangles": 2218
+      "triangles": 2226
     },
     {
       "object": "dropout_right",
-      "triangles": 2220
+      "triangles": 2226
     },
     {
       "object": "rear_block",
@@ -379,7 +379,7 @@
       "triangles": 2808
     }
   ],
-  "triangles": 50396,
+  "triangles": 50410,
   "bounds_min_mm": [
     -115.5,
     -200.0,

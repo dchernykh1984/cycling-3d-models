@@ -45,8 +45,8 @@
     "hub_torque_100kg_on_horizontal_pedal_Nm": 60.6,
     "force_on_two_M6_per_side_N": 404.0
   },
-  "printed_volume_cm3": 4759.8,
-  "petg_mass_estimate_kg": 3.32,
+  "printed_volume_cm3": 4767.5,
+  "petg_mass_estimate_kg": 3.33,
   "hardware_mass_estimate_kg": {
     "hub_motor_no_rim": 4.5,
     "cranks_chainring_bb": 1.3,

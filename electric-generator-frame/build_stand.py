@@ -25,6 +25,8 @@ SLEEVE_OD   = 60.0
 SLEEVE_L    = 86.5    # ширина корпуса BB86 — строго
 CLAMP_ID    = 60.4
 CLAMP_OD    = 84.0
+CLAMP_EAR_TOP = 56.0  # верх ушей хомута над осью каретки (было 50; выше башня не влезет на стол: 216 из 220)
+CLAMP_BOLT_DZ = 47.0  # ось 2 x M6x45 над осью каретки (было 40 — гайка упиралась в кольцо): от кольца до оси ≥8 мм, проворачиваются гайка и ключ 10 мм
 TOWER_T     = 44.0    # толщина башни по Y (±22)
 BAR_Z0, BAR_Z1 = 90.0, 108.0        # полка башни лежит на опорах основания (Z=90)
 TOWER_BOLT_X = 64.0                 # 4 x M8x80 DIN 912 поперёк: головка в зенковке одной щеки, гайка в шестигранном кармане другой
@@ -191,13 +193,13 @@ tower = prism("tower", [(-100, BAR_Z0), (100, BAR_Z0), (100, BAR_Z1), (-100, BAR
 legF = prism("legF", [(-100, BAR_Z0), (-56, BAR_Z0), (-6, BB_Z+8), (-42, BB_Z-16)], -hy, hy, 'XZ', C_PRINT)
 legR = prism("legR", [(56, BAR_Z0), (100, BAR_Z0), (42, BB_Z-16), (6, BB_Z+8)], -hy, hy, 'XZ', C_PRINT)
 ring = cyl("ring", CLAMP_OD/2, (0, -hy, BB_Z), (0, hy, BB_Z), C_PRINT)
-ears = box("ears", -16, 16, -hy, hy, BB_Z+26, BB_Z+50, C_PRINT)
+ears = box("ears", -16, 16, -hy, hy, BB_Z+26, BB_Z+CLAMP_EAR_TOP, C_PRINT)
 boss = obox("boss", STRUT_P1 - STRUT_U*44, STRUT_U, 44, STRUT_N, 16, -hy, hy, C_PRINT)
 boolean(tower, [legF, legR, ring, ears, boss], 'UNION')
 cut = [cyl("bore", CLAMP_ID/2, (0, -hy-1, BB_Z), (0, hy+1, BB_Z), C_PRINT),
-       box("slit", -1.5, 1.5, -hy-1, hy+1, BB_Z, BB_Z+60, C_PRINT)]
+       box("slit", -1.5, 1.5, -hy-1, hy+1, BB_Z, BB_Z+CLAMP_EAR_TOP+10, C_PRINT)]
 for yy in (-11, 11):
-    cut.append(cyl("pinch", 3.3, (-20, yy, BB_Z+40), (20, yy, BB_Z+40), C_PRINT, seg=48))
+    cut.append(cyl("pinch", 3.3, (-20, yy, BB_Z+CLAMP_BOLT_DZ), (20, yy, BB_Z+CLAMP_BOLT_DZ), C_PRINT, seg=48))
 for sx in (-1, 1):
     for z in TOWER_BOLT_Z:
         cut.append(cyl("sb", 4.3, (sx*TOWER_BOLT_X, -hy-1, z), (sx*TOWER_BOLT_X, hy+1, z), C_PRINT, seg=48))

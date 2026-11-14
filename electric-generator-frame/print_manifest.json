@@ -14,14 +14,14 @@
       "role": "structural",
       "print_size_mm": [
         200.0,
-        210.0,
+        216.0,
         44.0
       ],
       "fits_220x220x240": true,
       "non_manifold_edges": 0,
       "components": 1,
-      "volume_cm3": 665.7,
-      "triangles": 2888
+      "volume_cm3": 673.4,
+      "triangles": 2808
     },
     {
       "file": "02_PETG_bb86_sleeve_x1.stl",

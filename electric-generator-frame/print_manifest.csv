@@ -8,6 +8,7 @@ file,material,quantity,role,print_size_mm,volume_cm3
 08_PETG_axle_insert_x2.stl,PETG,2,replaceable_wear_part,64.0 x 89.0 x 16.0,47.1
 07_PETG_spacer_left_30p5mm_x1.stl,PETG,1,chainline_spacer,55.0 x 170.0 x 30.5,112.4
 07_PETG_spacer_right_9p5mm_x1.stl,PETG,1,chainline_spacer,55.0 x 170.0 x 9.5,35.0
+12_PETG_rod_bushing_x8.stl,PETG,8,structural,30.0 x 30.0 x 13.0,4.0
 09_PETG_TEST_dropout_slot_x1.stl,PETG,1,test_fit,75.0 x 34.0 x 10.0,17.6
 10_PETG_TEST_bb86_ring_ID40p9_x1.stl,PETG,1,test_fit,55.0 x 55.0 x 12.0,12.7
 10_PETG_TEST_bb86_ring_ID41p1_x1.stl,PETG,1,test_fit,55.0 x 55.0 x 12.0,12.5

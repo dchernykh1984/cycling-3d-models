@@ -3,14 +3,6 @@
   "purpose": "assembled_visual_reference_not_for_printing",
   "objects": [
     {
-      "object": "REF_alu_tube_20x400",
-      "triangles": 384
-    },
-    {
-      "object": "REF_alu_tube_20x400.001",
-      "triangles": 384
-    },
-    {
       "object": "REF_axle",
       "triangles": 164
     },
@@ -59,6 +51,14 @@
       "triangles": 1024
     },
     {
+      "object": "REF_guide_rod_M10x399",
+      "triangles": 124
+    },
+    {
+      "object": "REF_guide_rod_M10x399.001",
+      "triangles": 124
+    },
+    {
       "object": "REF_hub_motor",
       "triangles": 2044
     },
@@ -69,6 +69,70 @@
     {
       "object": "REF_pedal.001",
       "triangles": 12
+    },
+    {
+      "object": "REF_rod_nut_M10",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.001",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.002",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.003",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.004",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.005",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.006",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_nut_M10.007",
+      "triangles": 20
+    },
+    {
+      "object": "REF_rod_washer_M10",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.001",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.002",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.003",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.004",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.005",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.006",
+      "triangles": 1024
+    },
+    {
+      "object": "REF_rod_washer_M10.007",
+      "triangles": 1024
     },
     {
       "object": "REF_side_bolt_M8x50",
@@ -267,6 +331,38 @@
       "triangles": 4834
     },
     {
+      "object": "rod_bushing_0",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_1",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_2",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_3",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_4",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_5",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_6",
+      "triangles": 1024
+    },
+    {
+      "object": "rod_bushing_7",
+      "triangles": 1024
+    },
+    {
       "object": "sleeve_bb86",
       "triangles": 1568
     },
@@ -283,9 +379,9 @@
       "triangles": 2808
     }
   ],
-  "triangles": 34372,
+  "triangles": 50396,
   "bounds_min_mm": [
-    -100.0,
+    -115.5,
     -200.0,
     0.0
   ],

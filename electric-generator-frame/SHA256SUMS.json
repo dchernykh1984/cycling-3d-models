@@ -1,18 +1,18 @@
 {
   "algorithm": "sha256",
   "files": {
-    "README.md": "03ea1b09ccf49ea345aeb4b62876f26aa47143707377cf0c1ec9ac9cc28fba6e",
-    "assembly_report.json": "c5eab0db69315d4c0da9bfd7f82377238944f0d362fff9ed36dfb9c564e40cea",
-    "assembly_stl_manifest.json": "f174dda09ad88af255e296b29b99384c9a687404dc2731c3f2e34e10eb056d2d",
-    "bike_generator_stand.blend": "9d3d307e213460c8e94827f400ab5de7f1f3b55236f01cac1e9333236cbcf92c",
-    "bike_generator_stand_assembled.stl": "d2123065fe90233c2c4253ed8b62649c81e097ee0aa4e41b68b63e84d0bfcfe2",
-    "build_stand.py": "368e02f9bab7da9d9059a96a287789275bc7a3bedc6cbad3fa1a04d31f82c09c",
-    "checks.json": "9d9587bb94af59069955822b501363e7734b2e1605bfd7a72ed8bc65d047ac33",
-    "preview_assembly.png": "51b3212b929b669087a26495528b800c4d44f700403da80cb2e8c8edf2e9dea1",
-    "preview_front.png": "d4da8ad16b7d2b8084cfcd31164f088b7ceea4d17252979314a901cca81b0916",
-    "preview_rear.png": "c979128ff209b72f47f67b81255e69a012ea42de36a089db70976074f5bcadb5",
-    "print_manifest.csv": "355002cc4b1d73a5e2fcbe6b2148bb69718c12e3d1ec4ff9abf881f02685a314",
-    "print_manifest.json": "0e66665759f872af62bff97f1a27c9453769cc907ff01253ad078f73c79c876d",
+    "README.md": "7670cb725d67eb4a792b32455246890b67651f47207d15eb883094fa5161e745",
+    "assembly_report.json": "b86d14a0657697cbccbccc42194401bb2ec7cc1f561acd128f56e30e0edacd9c",
+    "assembly_stl_manifest.json": "b28104a60498fa442430a698840d96cc4478f0457e3f82db394958c6c4952df0",
+    "bike_generator_stand.blend": "dde3d6e980fa2076ed945ae7c628923e865dde4835e85db14c639f081cfdd5dc",
+    "bike_generator_stand_assembled.stl": "d4129bf1aeff851ebc9535c9866c47534d0a941d5b7b9a6953813f7b299b0633",
+    "build_stand.py": "d94eeb73fb10c69bcc4ec7dca01bf34b1b9d12d0c2c25e5032f5bc4c0d9457cf",
+    "checks.json": "cdae65d2e687d46c81fb1a06b0133d6165a71d4b064d4ee5f7b99fda3c201721",
+    "preview_assembly.png": "873a3c9b20e54a05604830c9c0d30a6445bb9d07322990d44bf2b845c2f388a0",
+    "preview_front.png": "cf5ed46addd9df9b49d0bfebaf168bb32cdd0fdfa676d111a8b4eb7bc84d34fc",
+    "preview_rear.png": "73563e827790c2fa830c6fbcd2b4d5b6608f9e121cf13c573ce265d5abf6972b",
+    "print_manifest.csv": "7568ce918b5a0b5a6ed9d8b5d7fc31988f8ced6c13d837cde21a5a100f21b90c",
+    "print_manifest.json": "2775a55e31ccdbf7bcbe0e77e3cd47e7d4022d605a880e7d3edffedf1d97dd8f",
     "torque_plate_steel_30x6_x2.dxf": "d4df7d5fbbb137ee81c559b5013108cefd5537e4a8b346554556cdd903315f7a",
     "stl_individual/01_PETG_tower_x1.stl": "a954b57b8f0685c82ab192bc96853b5a97d17e0803d0a14a85abc2395b9704d1",
     "stl_individual/02_PETG_bb86_sleeve_x1.stl": "ff73e495c2f48e3babcfdcc681d6c533aa8acea79bbd6040c6437d76a5b400d4",
@@ -28,6 +28,7 @@
     "stl_individual/10_PETG_TEST_bb86_ring_ID41p1_x1.stl": "6f84c4f2e324b41df5a184e3c446ecb15e74bc2cfc76aa19f686f10e3dd6af49",
     "stl_individual/10_PETG_TEST_bb86_ring_ID41p3_x1.stl": "fce8155ecf7a8fcbe6fc55e045a4a0bcdd72c6d5676b867d5ec2a6fee95422e3",
     "stl_individual/10_PETG_TEST_bb86_ring_ID41p5_x1.stl": "22ea373f45ee258fa611d2232133b461a687d121c67d1114e7a062f55f7f51c8",
-    "stl_individual/11_PETG_TEMPLATE_torque_plate_30x6_x2.stl": "b4aa80e2f8042ca35e5ceb728daf15cbfc50b293b26af5c32bf567648a2fad81"
+    "stl_individual/11_PETG_TEMPLATE_torque_plate_30x6_x2.stl": "b4aa80e2f8042ca35e5ceb728daf15cbfc50b293b26af5c32bf567648a2fad81",
+    "stl_individual/12_PETG_rod_bushing_x8.stl": "a9356dd2a794a114d0a1187b2171cc82c825c8ecba7a2e4142648e975d0b6e52"
   }
 }

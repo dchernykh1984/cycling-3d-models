@@ -32,15 +32,13 @@ BAR_Z0, BAR_Z1 = 90.0, 108.0        # полка башни лежит на оп
 TOWER_BOLT_X = 64.0                 # 4 x M8x80 DIN 912 поперёк: головка в зенковке одной щеки, гайка в шестигранном кармане другой
 TOWER_BOLT_Z = (100.0, 126.0)
 # Основание кареточного модуля: две ОДИНАКОВЫЕ половины (левая = правая, повёрнутая на 180° вокруг Z)
-TUBE_D = 20.0; TUBE_WALL = 2.0; TUBE_HOLE = 20.4; TUBE_Y = 24.0; TUBE_Z = 22.0
-TUBE_X0 = -100.0; TUBE_LEN = 400.0  # трубы: X -100..300
+TUBE_D = 20.0; TUBE_HOLE = 20.4; TUBE_Y = 24.0; TUBE_Z = 22.0   # каналы направляющих ⌀20,4 (проектировались под трубу ⌀20; теперь в них втулки 12 шпилек M10)
 BASE_W   = 200.0      # половина Y 0..200 -> колея 400 мм
 SPINE_Y  = 46.0       # продольный брус вокруг трубы: Y 0..46 (|Y|<48 — зона шатунов снаружи)
 SPINE_H  = 44.0
 PIER_X   = (20.0, 100.0); PIER_H = BAR_Z0        # опоры под полку башни (X ±20..100)
 WALL_Y   = (TOWER_T/2 + 0.3, 42.0); WALL_TOP = 140.0   # щёки, зажимающие башню (зазор 0.3/сторона)
 ARM_X    = (60.0, 100.0); ARM_H0 = 30.0; ARM_H1 = 16.0; ARM_Y0 = 40.0   # крылья-выносы (сужаются к концу)
-GRUB_X   = 0.0; GRUB_NUT_Y0 = 37.2    # установочный M6x16 сбоку между опорами, гайка в кармане, вход кармана сверху
 STRAP_X  = (65.0, 95.0); STRAP_Y = (172.0, 178.0)   # прорезь под стропу/верёвку к стулу
 # Втулка (замеры владельца + условные величины)
 HUB_X = 325.0; HUB_Z = 160.0           # (v4: 115)
@@ -68,7 +66,6 @@ BR_Z = (150.0, 200.0); BR_B = (BR_REAR_X - 27.0, 178.0)
 STRUT_T = (35.0, BB_Z - 30.0); STRUT_P1_X = 70.0; STRUT_HOLE = 5.75
 BR_BOLTS = [(BR_REAR_X-19.0, 160.0, 'rear'), (BR_REAR_X-11.0, 191.0, 'up')]   # M8 мост->боковины, выход кармана гайки
 WEB_X = (RC_X[0], BR_REAR_X); WEB_Y = (-HALF_IN, -HALF_IN+20.0)              # перемычка слева (сторона стола при печати)
-CLAMP_X = (RC_X[0]+RC_X[1])/2; CLAMP_NUT_Z = 38.0                             # вертикальный M6x30 прижимает трубу
 # Направляющие у владельца — шпилька M10, а не труба ⌀20 (трубы не нашлось). В каналах её центрируют втулки 12 с буртиком
 # на каждом конце канала; основание и задний блок зажаты на шпильке гайками M10 с обеих сторон (широкая шайба на буртике).
 ROD_D = 10.0; ROD_LEN = 399.0                      # отрезок шпильки: метр минус распорка 200 и два пропила
@@ -243,9 +240,6 @@ def base_half():
                 c.append(cyl("tbh", 8.25, (sx*TOWER_BOLT_X, WALL_Y[1]-10.0, z), (sx*TOWER_BOLT_X, WALL_Y[1]+1, z), C_PRINT, seg=64))
         xa, xb = sorted((sx*STRAP_X[0], sx*STRAP_X[1]))
         c.append(box("strap", xa, xb, STRAP_Y[0], STRAP_Y[1], -1, ARM_H0+1, C_PRINT))
-    c.append(tear("g6", 'Y', GRUB_X, TUBE_Z, 3.3, TUBE_Y+TUBE_HOLE/2-1, SPINE_Y+1, 90, C_PRINT, seg=32))
-    c.append(hexprism("g6n", 10.3, (GRUB_X, GRUB_NUT_Y0, TUBE_Z), (GRUB_X, GRUB_NUT_Y0+5.5, TUBE_Z), C_PRINT))
-    c.append(box("g6s", GRUB_X-5.15, GRUB_X+5.15, GRUB_NUT_Y0, GRUB_NUT_Y0+5.5, TUBE_Z, SPINE_H+1, C_PRINT))
     boolean(b, c, 'DIFFERENCE'); setmat(b, M_PETG); return b
 baseR = base_half()
 baseL = copy_transformed(baseR, "base_half_L", Matrix.Rotation(math.pi, 4, 'Z'), C_PRINT)
@@ -259,9 +253,6 @@ boolean(rb, [bridge, web], 'UNION')
 c = [cyl("strut_hole", STRUT_HOLE, STRUT_B - STRUT_U*3, STRUT_B + STRUT_U*24, C_PRINT, seg=48)]
 for sy in (-1, 1):
     c.append(tear("tube", 'X', sy*TUBE_Y, TUBE_Z, TUBE_HOLE/2, RC_X[0]-1, RC_X[1]+1, 0, C_PRINT, seg=64))   # вершина капли -> +Y (верх при печати на боку)
-    c.append(cyl("cs", 3.3, (CLAMP_X, sy*TUBE_Y, TUBE_Z+8), (CLAMP_X, sy*TUBE_Y, RC_H+1), C_PRINT, seg=32))
-    c.append(hexprism("csn", 10.3, (CLAMP_X, sy*TUBE_Y, CLAMP_NUT_Z), (CLAMP_X, sy*TUBE_Y, CLAMP_NUT_Z+5.5), C_PRINT, rot=0.0))
-    c.append(box("css", CLAMP_X, RC_X[1]+1, sy*TUBE_Y-5.15, sy*TUBE_Y+5.15, CLAMP_NUT_Z, CLAMP_NUT_Z+5.5, C_PRINT))
     for x in PB_X:
         c.append(cyl("pb", 4.3, (x, sy*(HALF_IN+1), PB_Z), (x, sy*(HALF_IN-30), PB_Z), C_PRINT, seg=48))
         ya, yb = sorted((sy*(HALF_IN-8), sy*(HALF_IN-15)))

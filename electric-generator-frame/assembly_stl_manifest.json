@@ -312,11 +312,11 @@
     },
     {
       "object": "base_half_L",
-      "triangles": 2200
+      "triangles": 1822
     },
     {
       "object": "base_half_R",
-      "triangles": 2200
+      "triangles": 1822
     },
     {
       "object": "dropout_left",
@@ -328,7 +328,7 @@
     },
     {
       "object": "rear_block",
-      "triangles": 4834
+      "triangles": 4132
     },
     {
       "object": "rod_bushing_0",
@@ -379,7 +379,7 @@
       "triangles": 2808
     }
   ],
-  "triangles": 50410,
+  "triangles": 48952,
   "bounds_min_mm": [
     -115.5,
     -200.0,

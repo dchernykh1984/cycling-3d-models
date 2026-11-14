@@ -312,11 +312,11 @@
     },
     {
       "object": "base_half_L",
-      "triangles": 1822
+      "triangles": 1830
     },
     {
       "object": "base_half_R",
-      "triangles": 1822
+      "triangles": 1830
     },
     {
       "object": "dropout_left",
@@ -379,7 +379,7 @@
       "triangles": 2808
     }
   ],
-  "triangles": 48952,
+  "triangles": 48968,
   "bounds_min_mm": [
     -115.5,
     -200.0,

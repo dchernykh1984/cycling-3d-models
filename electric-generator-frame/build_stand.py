@@ -256,10 +256,11 @@ for sy in (-1, 1):
     for x in PB_X:
         c.append(cyl("pb", 4.3, (x, sy*(HALF_IN+1), PB_Z), (x, sy*(HALF_IN-30), PB_Z), C_PRINT, seg=48))
         ya, yb = sorted((sy*(HALF_IN-8), sy*(HALF_IN-15)))
-        c.append(box("nslot", x-6.8, x+6.8, ya, yb, PB_Z-7.9, RC_H+1, C_PRINT))
-        if sy < 0:   # слева над карманом стоит перемычка: карман продлён до ближнего торца, гайка входит сбоку
-            xa, xb = (RC_X[0]-1, x) if x - RC_X[0] < RC_X[1] - x else (x, RC_X[1]+1)
-            c.append(box("nside", xa, xb, ya, yb, PB_Z-7.9, RC_H+1, C_PRINT))
+        if sy > 0:
+            c.append(box("nslot", x-6.8, x+6.8, ya, yb, PB_Z-7.9, RC_H+1, C_PRINT))
+        else:   # слева сверху перемычка: карман открыт к ближнему торцу (гайка входит сбоку углом вниз) и закрыт сверху — иначе его потолок при печати на боку без опоры
+            xa, xb = (RC_X[0]-1, x+6.8) if x - RC_X[0] < RC_X[1] - x else (x-6.8, RC_X[1]+1)
+            c.append(box("nslot", xa, xb, ya, yb, PB_Z-7.9, PB_Z+7.9, C_PRINT))
     for (bx, bz, sd) in BR_BOLTS:
         c.append(cyl("bh", 4.3, (bx, sy*(HALF_IN+1), bz), (bx, sy*(HALF_IN-30), bz), C_PRINT, seg=48))
         ya, yb = sorted((sy*(HALF_IN-8), sy*(HALF_IN-15)))

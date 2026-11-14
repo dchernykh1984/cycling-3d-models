@@ -68,8 +68,8 @@
       "fits_220x220x240": true,
       "non_manifold_edges": 0,
       "components": 1,
-      "volume_cm3": 495.0,
-      "triangles": 4870
+      "volume_cm3": 495.7,
+      "triangles": 4834
     },
     {
       "file": "05_PETG_dropout_right_x1.stl",

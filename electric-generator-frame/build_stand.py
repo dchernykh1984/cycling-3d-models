@@ -69,6 +69,13 @@ STRUT_T = (35.0, BB_Z - 30.0); STRUT_P1_X = 70.0; STRUT_HOLE = 5.75
 BR_BOLTS = [(BR_REAR_X-19.0, 160.0, 'rear'), (BR_REAR_X-11.0, 191.0, 'up')]   # M8 мост->боковины, выход кармана гайки
 WEB_X = (RC_X[0], BR_REAR_X); WEB_Y = (-HALF_IN, -HALF_IN+20.0)              # перемычка слева (сторона стола при печати)
 CLAMP_X = (RC_X[0]+RC_X[1])/2; CLAMP_NUT_Z = 38.0                             # вертикальный M6x30 прижимает трубу
+# Направляющие у владельца — шпилька M10, а не труба ⌀20 (трубы не нашлось). В каналах её центрируют втулки 12 с буртиком
+# на каждом конце канала; основание и задний блок зажаты на шпильке гайками M10 с обеих сторон (широкая шайба на буртике).
+ROD_D = 10.0; ROD_LEN = 399.0                      # отрезок шпильки: метр минус распорка 200 и два пропила
+BUSH_OD = TUBE_D; BUSH_ID = 10.4; BUSH_L = 10.0; BUSH_FL_D = 30.0; BUSH_FL_T = 3.0   # хвостовик под канал трубы ⌀20, к концу сужается на 0,8 по ⌀
+ROD_NUT_H = 10.0; ROD_WASHER_T = 2.5               # гайка M10 с нейлоновым кольцом (DIN 985), шайба ⌀30
+ROD_FACES = ((-100.0, -1), (100.0, 1), (RC_X[0], -1), (RC_X[1], 1))   # торцы основания и заднего блока, направление наружу
+ROD_X0 = ROD_FACES[0][0] - BUSH_FL_T - ROD_WASHER_T - ROD_NUT_H     # передний конец шпильки — вровень с гайкой
 PEDAL_R = 215.0; SEG = 128
 _d = Vector((BR_B[0]-STRUT_T[0], 0, BR_B[1]-STRUT_T[1])).normalized()
 STRUT_U = _d; STRUT_N = Vector((-_d.z, 0, _d.x)); STRUT_B = Vector((BR_B[0], 0, BR_B[1]))
@@ -332,6 +339,16 @@ spL = spacer("left", SHIM_LEFT); spR = spacer("right", SHIM_RIGHT)
 PARTS["07_PETG_spacer_left_%smm_x1" % format(SHIM_LEFT, "g").replace(".", "p")] = (spL, RX90)
 PARTS["07_PETG_spacer_right_%smm_x1" % format(SHIM_RIGHT, "g").replace(".", "p")] = (spR, RXm90)
 
+# ===== 6а. Втулки шпилек-направляющих: по одной на каждый конец канала, 8 шт. =====
+def rod_bushing(name, fx, d, y):   # fx — торец блока, d — наружу: буртик снаружи, хвостовик в канале
+    p = lambda dx: (fx + d*dx, y, TUBE_Z)
+    b = cyl(name, BUSH_FL_D/2, p(0), p(BUSH_FL_T), C_PRINT, seg=96)
+    boolean(b, cyl("sp", BUSH_OD/2, p(0.5), p(-BUSH_L), C_PRINT, seg=96, r2=BUSH_OD/2-0.4), 'UNION')
+    boolean(b, cyl("bore", BUSH_ID/2, p(BUSH_FL_T+1), p(-BUSH_L-1), C_PRINT, seg=64), 'DIFFERENCE')
+    return setmat(b, M_PETG)
+BUSH = [rod_bushing("rod_bushing_%d" % i, fx, d, s*TUBE_Y) for i, (s, (fx, d)) in enumerate((s, f) for s in (-1, 1) for f in ROD_FACES)]
+PARTS["12_PETG_rod_bushing_x8"] = (BUSH[0], Matrix.Rotation(math.radians(-90), 4, 'Y'))   # печать буртиком на столе, хвостовик вверх
+
 # ===== 7. Тесты посадок (печатать первыми) =====
 tc = box("tpl_dropout_slot", 0, 75, 0, 34, 0, 10, C_TPL)
 c = []
@@ -354,9 +371,12 @@ for i, d in enumerate((40.9, 41.1, 41.3, 41.5)):
 
 # ===== 8. Референс (металл, мотор, привод) — не печатать =====
 for s in (-1, 1):
-    r = cyl("REF_alu_tube_%dx%d" % (TUBE_D, TUBE_LEN), TUBE_D/2, (TUBE_X0, s*TUBE_Y, TUBE_Z), (TUBE_X0+TUBE_LEN, s*TUBE_Y, TUBE_Z), C_REF, seg=48)
-    boolean(r, cyl("bore", TUBE_D/2-TUBE_WALL, (TUBE_X0-1, s*TUBE_Y, TUBE_Z), (TUBE_X0+TUBE_LEN+1, s*TUBE_Y, TUBE_Z), C_REF, seg=48), 'DIFFERENCE')
-    setmat(r, M_ALU)
+    setmat(cyl("REF_guide_rod_M10x%d" % ROD_LEN, ROD_D/2, (ROD_X0, s*TUBE_Y, TUBE_Z), (ROD_X0+ROD_LEN, s*TUBE_Y, TUBE_Z), C_REF, seg=32), M_STEEL)
+    for fx, d in ROD_FACES:
+        p = lambda dx: (fx + d*dx, s*TUBE_Y, TUBE_Z)
+        w = cyl("REF_rod_washer_M10", 15, p(BUSH_FL_T), p(BUSH_FL_T+ROD_WASHER_T), C_REF)
+        boolean(w, cyl("bore", 5.5, p(BUSH_FL_T-1), p(BUSH_FL_T+ROD_WASHER_T+1), C_REF), 'DIFFERENCE'); setmat(w, M_STEEL)
+        setmat(hexprism("REF_rod_nut_M10", 17, p(BUSH_FL_T+ROD_WASHER_T), p(BUSH_FL_T+ROD_WASHER_T+ROD_NUT_H), C_REF), M_STEEL)
 STRUT_ROD_LEN = 200; STRUT_FRONT_INSERT = STRUT_ROD_LEN - STRUT_D - 22.0
 sr = cyl("REF_strut_rod_M10x%d" % STRUT_ROD_LEN, 5, STRUT_P1 - STRUT_U*STRUT_FRONT_INSERT, STRUT_P1 - STRUT_U*STRUT_FRONT_INSERT + STRUT_U*STRUT_ROD_LEN, C_REF, seg=32)
 setmat(sr, M_STEEL)
@@ -451,7 +471,8 @@ def ivol(a, b):
     bm = bmesh.new(); bm.from_mesh(me2); vol = abs(bm.calc_volume()); bm.free(); ev.to_mesh_clear()
     md = tmp.data; bpy.data.objects.remove(tmp); bpy.data.meshes.remove(md)
     return round(vol, 3)
-tubes = [o for o in C_REF.objects if o.name.startswith("REF_alu_tube")]
+tubes = [o for o in C_REF.objects if o.name.startswith("REF_guide_rod")]
+ROD_HW = [o for o in C_REF.objects if o.name.startswith(("REF_rod_washer", "REF_rod_nut"))]
 pairs = [("tower", tower, "base_R", baseR), ("tower", tower, "base_L", baseL), ("base_R", baseR, "base_L", baseL),
          ("sleeve", sleeve, "tower", tower), ("chainring", cr, "tower", tower), ("chainring", cr, "base_R", baseR), ("chainring", cr, "sleeve", sleeve),
          ("hub", hub, "rear_block", rb), ("hub", hub, "dropout_R", doR), ("hub", hub, "dropout_L", doL), ("hub", hub, "insert_R", insR),
@@ -463,7 +484,11 @@ for k, e in ENV.items():
     for n, o in (("base_R", baseR), ("base_L", baseL), ("tower", tower), ("sleeve", sleeve), ("rear_block", rb)):
         pairs.append((k, e, n, o))
 for i, t in enumerate(tubes):
-    for n, o in (("base_R", baseR), ("base_L", baseL), ("rear_block", rb)): pairs.append(("tube%d" % i, t, n, o))
+    for n, o in (("base_R", baseR), ("base_L", baseL), ("rear_block", rb)): pairs.append(("rod%d" % i, t, n, o))
+for i, b in enumerate(BUSH):
+    for n, o in [("base_R", baseR), ("base_L", baseL), ("rear_block", rb)] + [("rod%d" % j, t) for j, t in enumerate(tubes)]: pairs.append(("rod_bushing%d" % i, b, n, o))
+for i, h in enumerate(ROD_HW):
+    for n, o in [("base_R", baseR), ("base_L", baseL), ("rear_block", rb), ("dropout_R", doR), ("dropout_L", doL), ("hub", hub)] + list(ENV.items()): pairs.append(("rod_hw%d" % i, h, n, o))
 for i, b in enumerate(TB_REF):
     for n, o in (("tower", tower), ("base_R", baseR), ("base_L", baseL)): pairs.append(("tower_bolt%d" % i, b, n, o))
 for i, b in enumerate(BR_REF): pairs.append(("side_bolt%d" % i, b, "strut_rod", sr))
@@ -550,13 +575,13 @@ with open(os.path.join(PROJECT, "assembly_stl_manifest.json"), "w", encoding="ut
 # ===== 13. Отчёт сборки и проверок =====
 printed_cm3 = sum(r["volume_cm3"]*r["quantity"] for r in MANIFEST if "TEST" not in r["file"] and "TEMPLATE" not in r["file"])
 petg_mass_kg = printed_cm3*1.27*0.55/1000     # ~55% эффективной плотности (6-8 периметров + 30-40% заполнения)
-hardware_kg = {"hub_motor_no_rim": 4.5, "cranks_chainring_bb": 1.3, "chain": 0.3, "alu_tubes_2x400": 0.25, "steel_fasteners_strut_torque_plates": 0.7}
+hardware_kg = {"hub_motor_no_rim": 4.5, "cranks_chainring_bb": 1.3, "chain": 0.3, "guide_rods_M10_2x399_nuts_washers": 0.55, "steel_fasteners_strut_torque_plates": 0.7}
 mass_kg = petg_mass_kg + sum(hardware_kg.values())
 g = 9.81; cg_x = 150.0; half_track = BASE_W; rear_edge_x = HUB_X + 45.0; top_pedal_z = BB_Z + 170
 REPORT = {
     "version": "v5", "status": "HOLD_FOR_ACTUAL_DIMENSIONS_AND_FIT_TESTS",
     "params": {"BB_Z": BB_Z, "HUB_X": HUB_X, "HUB_Z": HUB_Z, "OLD": OLD, "AXLE_D": AXLE_D, "AXLE_FLAT": AXLE_FLAT, "DO_AXLE_T": DO_AXLE_T,
-               "front_track_mm": 2*BASE_W, "rear_track_mm": round(2*(OLD/2+DO_T+FOOT_W), 1), "tube_length_mm": TUBE_LEN, "tube_x_range": [TUBE_X0, TUBE_X0+TUBE_LEN],
+               "front_track_mm": 2*BASE_W, "rear_track_mm": round(2*(OLD/2+DO_T+FOOT_W), 1), "guide_rod_length_mm": ROD_LEN, "guide_rod_x_range": [ROD_X0, ROD_X0+ROD_LEN],
                "strut_length_mm": STRUT_ROD_LEN, "strut_bearing_distance_mm": round(STRUT_D, 1), "strut_front_insert_mm": round(STRUT_FRONT_INSERT, 1),
                "bb_to_hub_distance_mm": round(math.hypot(HUB_X, BB_Z-HUB_Z), 1), "chainline_front_mm": CRANK_CHAINLINE, "chainline_rear_mm": HUB_Y+HUB_CHAINLINE,
                "hub_offset_y_mm": HUB_Y, "spacer_left_mm": SHIM_LEFT, "spacer_right_mm": SHIM_RIGHT, "axle_stack_per_side_mm": DO_T + 3 + 8,

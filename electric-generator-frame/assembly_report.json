@@ -11,10 +11,10 @@
     "DO_AXLE_T": 10.0,
     "front_track_mm": 400.0,
     "rear_track_mm": 297.0,
-    "tube_length_mm": 400.0,
-    "tube_x_range": [
-      -100.0,
-      300.0
+    "guide_rod_length_mm": 399.0,
+    "guide_rod_x_range": [
+      -115.5,
+      283.5
     ],
     "strut_length_mm": 200,
     "strut_bearing_distance_mm": 148.9,
@@ -45,23 +45,23 @@
     "hub_torque_100kg_on_horizontal_pedal_Nm": 60.6,
     "force_on_two_M6_per_side_N": 404.0
   },
-  "printed_volume_cm3": 4767.5,
-  "petg_mass_estimate_kg": 3.33,
+  "printed_volume_cm3": 4799.5,
+  "petg_mass_estimate_kg": 3.35,
   "hardware_mass_estimate_kg": {
     "hub_motor_no_rim": 4.5,
     "cranks_chainring_bb": 1.3,
     "chain": 0.3,
-    "alu_tubes_2x400": 0.25,
+    "guide_rods_M10_2x399_nuts_washers": 0.55,
     "steel_fasteners_strut_torque_plates": 0.7
   },
-  "total_mass_estimate_kg": 10.4,
+  "total_mass_estimate_kg": 10.7,
   "stability_illustrative": {
     "method": "rigid body on floor, no anchoring; illustrative, not certification",
-    "lateral_tip_force_N_at_top_pedal_no_vertical_load": 48.5,
-    "lateral_tip_force_N_at_top_pedal_with_300N_on_pedal_y110": 112.8,
+    "lateral_tip_force_N_at_top_pedal_no_vertical_load": 50.0,
+    "lateral_tip_force_N_at_top_pedal_with_300N_on_pedal_y110": 114.3,
     "vertical_pedal_force_inside_footprint": "pedal |Y|~110 < half-track 200: vertical pedal load cannot tip the stand",
-    "longitudinal_slide_force_N_mu0p4": 40.7,
-    "longitudinal_tip_force_N_about_rear_edge": 53.3,
+    "longitudinal_slide_force_N_mu0p4": 42.0,
+    "longitudinal_tip_force_N_about_rear_edge": 55.0,
     "note": "horizontal pedal force at top of stroke at 200-500 W is ~100-300 N: tie the stand to the chair (strap slots in wings) or it will slide/rock"
   },
   "unresolved": [

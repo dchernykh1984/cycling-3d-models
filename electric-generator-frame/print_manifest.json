@@ -152,6 +152,22 @@
       "triangles": 856
     },
     {
+      "file": "12_PETG_rod_bushing_x8.stl",
+      "material": "PETG",
+      "quantity": 8,
+      "role": "structural",
+      "print_size_mm": [
+        30.0,
+        30.0,
+        13.0
+      ],
+      "fits_220x220x240": true,
+      "non_manifold_edges": 0,
+      "components": 1,
+      "volume_cm3": 4.0,
+      "triangles": 1024
+    },
+    {
       "file": "09_PETG_TEST_dropout_slot_x1.stl",
       "material": "PETG",
       "quantity": 1,

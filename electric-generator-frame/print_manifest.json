@@ -84,8 +84,8 @@
       "fits_220x220x240": true,
       "non_manifold_edges": 0,
       "components": 1,
-      "volume_cm3": 516.6,
-      "triangles": 2220
+      "volume_cm3": 693.0,
+      "triangles": 2226
     },
     {
       "file": "06_PETG_dropout_left_x1.stl",
@@ -100,8 +100,8 @@
       "fits_220x220x240": true,
       "non_manifold_edges": 0,
       "components": 1,
-      "volume_cm3": 516.6,
-      "triangles": 2218
+      "volume_cm3": 693.0,
+      "triangles": 2226
     },
     {
       "file": "08_PETG_axle_insert_x2.stl",

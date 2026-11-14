@@ -264,7 +264,7 @@
     },
     {
       "object": "rear_block",
-      "triangles": 4870
+      "triangles": 4834
     },
     {
       "object": "sleeve_bb86",
@@ -283,7 +283,7 @@
       "triangles": 2888
     }
   ],
-  "triangles": 34488,
+  "triangles": 34452,
   "bounds_min_mm": [
     -100.0,
     -200.0,

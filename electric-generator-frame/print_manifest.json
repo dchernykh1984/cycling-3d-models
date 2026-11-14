@@ -52,8 +52,8 @@
       "fits_220x220x240": true,
       "non_manifold_edges": 0,
       "components": 1,
-      "volume_cm3": 1098.7,
-      "triangles": 1822
+      "volume_cm3": 1095.4,
+      "triangles": 1830
     },
     {
       "file": "04_PETG_rear_block_x1.stl",

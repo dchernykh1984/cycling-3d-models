@@ -236,8 +236,8 @@ def base_half():
             c.append(tear("sb", 'Y', sx*TOWER_BOLT_X, z, 4.3, WALL_Y[0]-1, WALL_Y[1]+1, 90, C_PRINT))
             if sx > 0:   # гайка M8 в шестигранном кармане глубиной 7 (вершина шестигранника вверх при печати)
                 c.append(hexprism("tbn", 13.4, (sx*TOWER_BOLT_X, WALL_Y[1]-7.0, z), (sx*TOWER_BOLT_X, WALL_Y[1]+1, z), C_PRINT))
-            else:        # головка DIN 912 + шайба M8 в зенковке 16.5 глубиной 10
-                c.append(cyl("tbh", 8.25, (sx*TOWER_BOLT_X, WALL_Y[1]-10.0, z), (sx*TOWER_BOLT_X, WALL_Y[1]+1, z), C_PRINT, seg=64))
+            else:        # головка + шайба M8 в зенковке 22 глубиной 10 (было 16.5 — под DIN 912; у владельца шестигранная головка, нужен накидной ключ 13 — снаружи 20–21)
+                c.append(cyl("tbh", 11.0, (sx*TOWER_BOLT_X, WALL_Y[1]-10.0, z), (sx*TOWER_BOLT_X, SPINE_Y+1, z), C_PRINT, seg=64))   # до SPINE_Y: у нижней срезает кромку ступеньки опоры под кольцо ключа
         xa, xb = sorted((sx*STRAP_X[0], sx*STRAP_X[1]))
         c.append(box("strap", xa, xb, STRAP_Y[0], STRAP_Y[1], -1, ARM_H0+1, C_PRINT))
     boolean(b, c, 'DIFFERENCE'); setmat(b, M_PETG); return b

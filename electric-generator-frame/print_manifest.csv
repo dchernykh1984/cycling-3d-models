@@ -1,5 +1,5 @@
 file,material,quantity,role,print_size_mm,volume_cm3
-01_PETG_tower_x1.stl,PETG,1,structural,200.0 x 210.0 x 44.0,665.7
+01_PETG_tower_x1.stl,PETG,1,structural,200.0 x 216.0 x 44.0,673.4
 02_PETG_bb86_sleeve_x1.stl,PETG,1,structural,60.0 x 60.0 x 86.5,129.6
 03_PETG_base_half_x2.stl,PETG,2,structural,200.0 x 200.0 x 140.0,1097.0
 04_PETG_rear_block_x1.stl,PETG,1,structural,55.0 x 200.0 x 105.0,495.7

@@ -280,10 +280,10 @@
     },
     {
       "object": "tower",
-      "triangles": 2888
+      "triangles": 2808
     }
   ],
-  "triangles": 34452,
+  "triangles": 34372,
   "bounds_min_mm": [
     -100.0,
     -200.0,

@@ -45,8 +45,8 @@
     "hub_torque_100kg_on_horizontal_pedal_Nm": 60.6,
     "force_on_two_M6_per_side_N": 404.0
   },
-  "printed_volume_cm3": 4760.7,
-  "petg_mass_estimate_kg": 3.33,
+  "printed_volume_cm3": 4759.1,
+  "petg_mass_estimate_kg": 3.32,
   "hardware_mass_estimate_kg": {
     "hub_motor_no_rim": 4.5,
     "cranks_chainring_bb": 1.3,
@@ -58,7 +58,7 @@
   "stability_illustrative": {
     "method": "rigid body on floor, no anchoring; illustrative, not certification",
     "lateral_tip_force_N_at_top_pedal_no_vertical_load": 48.5,
-    "lateral_tip_force_N_at_top_pedal_with_300N_on_pedal_y110": 112.8,
+    "lateral_tip_force_N_at_top_pedal_with_300N_on_pedal_y110": 112.7,
     "vertical_pedal_force_inside_footprint": "pedal |Y|~110 < half-track 200: vertical pedal load cannot tip the stand",
     "longitudinal_slide_force_N_mu0p4": 40.7,
     "longitudinal_tip_force_N_about_rear_edge": 53.3,
